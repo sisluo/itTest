@@ -1,0 +1,114 @@
+.box {
+    width: 420px;
+    height: 720px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 8px -2px #000;
+
+    /* 相对定位 */
+    position: relative;
+}
+
+
+
+/* 开始界面 */
+.start {
+    width: 100%;
+    height: 100%;
+    background: url("../images/286.PNG") no-repeat 0 0/cover;
+
+    /* 绝对定位 */
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* 隐藏开始界面 */
+    /* display: none; */
+}
+/* 文字 */
+.words{
+    width: 100%;
+    height: 200px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top:  100px;
+    margin-left: -210px;
+    text-align: center;
+    font-size: 75px;
+    text-shadow: 1px 2px 10px  yellow;
+    /* border: red 1px solid; */
+} 
+
+
+/* 开始游戏按钮 */
+.begin {
+    width: 200px;
+    height: 40px;
+
+    color: white;
+    /* 文字阴影：x坐标 y坐标 模糊半径 阴影颜色 */
+    text-shadow: 1px 2px 1px #000;
+    /* 字体加粗 */
+    font-weight: bold;
+    /* 字间距 */
+    letter-spacing: 3px;
+
+    background-color: green;
+    text-align: center;
+    line-height: 40px;
+
+    /* 子元素 绝对定位 */
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    margin-left: -100px;
+
+    /* 圆角属性 */
+    border-radius: 8px;
+    border-bottom: 3px solid #6f6f6f;
+}
+
+/* 开始游戏按钮 */
+/* :active  伪类选择器--鼠标按下未松开的样式 */
+.begin:active {
+    border-bottom: none;
+}
+
+
+
+/* 游戏界面的样式 */
+.game {
+    width: 100%;
+    height: 100%;
+    /* 背景移动 - y轴平铺 */
+    background: url(../images/286.PNG) repeat-y 0 0/100% auto;
+
+    /* 绝对定位 */
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* 隐藏游戏界面 */
+    display: none;
+}
+/* 玩家的飞机样式 */
+.player{
+    width: 60px;
+    height: 72px;
+    background: url(../images/plane.gif) no-repeat 0 0/cover;
+
+    position: absolute;
+    left: calc(50% - 30px);
+    top: 580px;
+
+    /* transform: translateX(-50%); */
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
